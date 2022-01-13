@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/">
+        <file alias="icono">recursos/caliente.png</file>
+    </qresource>
+</RCC>
