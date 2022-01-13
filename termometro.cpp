@@ -41,7 +41,7 @@ float Termometro::cent2Fahr(int valor)
         float k= valor+273.15;
         ui->dialFahr->setValue(f);
         ui->dialKel->setValue(k);
-        return f;
+        return 0;
     }
     return 0;
 }
@@ -50,8 +50,10 @@ float Termometro::fahr2Cent(int valor)
 {
     if(ui->dialFahr->hasFocus()){
         float c = (valor - 32) * 5.0/9;
+        float k= ((valor-32)*(0.55555555555))+273.15;
+        ui->dialKel->setValue(k);
         ui->dialCent->setValue(c);
-        return c;
+        return 0;
     }
     return 0;
 }
@@ -61,9 +63,9 @@ float Termometro::kelv2Cent(int valor)
     if(ui->dialKel->hasFocus()){
         float c = valor - 273.15;
         float f= 1.8*(valor-273)+32;
-        ui->dialFahr->valueChanged(f);
+        ui->dialFahr->setValue(f);
         ui->dialCent->setValue(c);
-        return c;
+        return 0;
     }
     return 0;
 }

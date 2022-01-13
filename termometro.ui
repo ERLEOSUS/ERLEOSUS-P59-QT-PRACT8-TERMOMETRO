@@ -45,6 +45,9 @@
          <property name="styleSheet">
           <string notr="true">background-color: rgb(138, 226, 52);</string>
          </property>
+         <property name="value" stdset="0">
+          <double>32.000000000000000</double>
+         </property>
         </widget>
        </item>
        <item>
